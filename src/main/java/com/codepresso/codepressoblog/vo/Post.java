@@ -10,11 +10,11 @@ public class Post {
     Date createAt;
 
 
-    public Post(Integer id, String title, String content, String username) {
+    public Post(Integer id, String title,String username ,String content) {
         this.id = id;
         this.title = title;
-        this.content = content;
         this.username = username;
+        this.content = content;
     }
 
     public Post(Integer id, String title, String content, String username, Date createAt) {

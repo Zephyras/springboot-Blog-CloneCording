@@ -21,5 +21,16 @@
         FROM post
         WHERE id=#{id};
     </select>
+
+    <insert id="save">
+        INSERT INTO post(title, content, username)
+        VALUES (#{post.title}, #{post.content}, #{post.username});
+    </insert>
+
+    <update id="update">
+        UPDATE post
+        SET title=#{post.title}, content=#{post.content}
+        WHERE id=#{post.id};
+    </update>
 </mapper>
 

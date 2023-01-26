@@ -11,6 +11,6 @@ public class PostRequestDto {
     String  username;
 
     public Post getPost() {
-        return new Post(this.id, this.title, this.content, this.username);
+        return new Post(this.id, this.title, this.username, this.content);
     }
 }

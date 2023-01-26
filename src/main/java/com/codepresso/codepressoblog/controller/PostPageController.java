@@ -22,4 +22,16 @@ public class PostPageController {
         model.addAttribute("post", post);
         return "post_detail";
     }
+
+    @RequestMapping("/post/create")
+    public String getPostCreatePage(){
+        return "post_write";
+    }
+
+    @RequestMapping("/post/edit/{id}")
+    public String getPostCreatePage(Model model, @PathVariable Integer id) {
+        Post post = postService.getPostById(id);
+        model.addAttribute("post", post);
+        return "post_edit";
+    }
 }
